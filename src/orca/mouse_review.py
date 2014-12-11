@@ -31,7 +31,7 @@ try:
     from gi.repository import Wnck
     _mouseReviewCapable = True
 except:
-    debug.println(debug.LEVEL_WARNING, \
+    de//bug.println(debug.LEVEL_WARNING, \
                   "Python module wnck not found, mouse review not available.")
     _mouseReviewCapable = False
 
@@ -242,9 +242,9 @@ class MouseReviewer:
                         not self._currentMouseOver.word_ctx):
             output_obj.append(self._currentMouseOver.acc)
 
-        if self._currentMouseOver.word_ctx:
-            if self._currentMouseOver.word_ctx != self._oldMouseOver.word_ctx:
-                output_obj.append(self._currentMouseOver.word_ctx.word)
+        #if self._currentMouseOver.word_ctx:
+        #    if self._currentMouseOver.word_ctx != self._oldMouseOver.word_ctx:
+        #        output_obj.append(self._currentMouseOver.word_ctx.word)
 
         self._outputElements(output_obj)
         return False
